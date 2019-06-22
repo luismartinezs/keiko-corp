@@ -30,6 +30,11 @@
 - Minification
 	- Can we reduce number of css files?
 	- Combine scripts into one?
-	- Use minified version of bootstrap
-	- Use the minified version of jQuery
+	- Use minified version of bootstrap DONE
+	- Use the minified version of jQuery DONE
 	- Uglify code
+
+## Page load times
+
+Slow 3G connection
+- Initial (DOMContentLoaded / Load in ms): 5.89 / 34.93
