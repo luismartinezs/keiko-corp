@@ -38,3 +38,19 @@
 
 Slow 3G connection
 - Initial (DOMContentLoaded / Load in ms): 5.89 / 34.93
+- Current: 10.30 / 12.32
+
+## Solutions
+
+Provided by course
+
+- Do we really need libraries or can we make the same with native css / js?
+- All script tags to the end of body
+- Do we need all these js files? Are they even working?
+- Minimize all css and js
+- Combine all scripts into one file
+- Have style tag in head with all css for above fold, and the rest of styles at end of body
+- Optimize images
+- Add async or defer tags to scripts
+- Try to use native js dom api instead of jquery
+Focus on 80/20 because potentially optimization never ends

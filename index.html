@@ -10,7 +10,322 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <style>
+      body {
+        background: #20866e;
+        padding: 0;
+        margin: 0;
+      }
+      a:focus {
+        color: #fff !important;
+        text-decoration: none !important;
+      }
+      .container {
+        max-width: 1130px;
+      }
+      header {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 130px;
+        z-index: 99;
+        background-color: #41c17d;
+        background-image: -moz-linear-gradient(
+          bottom,
+          #248888 0,
+          #248888 0.27%,
+          #40c27d 99.46%,
+          #40c27d 100%
+        );
+        background-image: -o-linear-gradient(
+          bottom,
+          #248888 0,
+          #248888 0.27%,
+          #40c27d 99.46%,
+          #40c27d 100%
+        );
+        background-image: -webkit-linear-gradient(
+          bottom,
+          #248888 0,
+          #248888 0.27%,
+          #40c27d 99.46%,
+          #40c27d 100%
+        );
+        background-image: linear-gradient(
+          bottom,
+          #248888 0,
+          #248888 0.27%,
+          #40c27d 99.46%,
+          #40c27d 100%
+        );
+      }
+      header {
+        position: relative;
+        height: 150px;
+        background-image: linear-gradient(#23a94c00, #248888);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4vw));
+      }
+      header .logo {
+        display: table-cell;
+        margin: 45px 100px 0 0;
+      }
+      header .logo img {
+        width: 200px;
+        border-radius: 5px 20px 5px;
+        box-shadow: 0 8px 6px -6px #000;
+      }
+      header .burger_icon {
+        display: none;
+        float: right;
+        background: #fff;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        color: #43b779;
+        font-family: open_regular, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        margin: 45px 10px 0 0;
+      }
+      header .burger_icon:hover {
+        cursor: pointer;
+      }
+      header .burger_icon.active {
+        background: #359663;
+        color: #fff;
+      }
+      header nav {
+        margin-top: 50px;
+        display: table-cell;
+      }
+      header nav li {
+        float: left;
+        margin-left: 40px;
+      }
+      header nav li:first-child {
+        margin: 0;
+      }
+      header nav li a {
+        color: #fff;
+        font-family: open_regular, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+      }
+      header nav li a:focus,
+      header nav li a:hover {
+        text-decoration: none;
+        color: #b7efd1 !important;
+      }
+      header .social {
+        display: table-cell;
+        margin-top: 45px;
+      }
+      header .social li {
+        float: left;
+        margin-left: 20px;
+        border-radius: 5px 20px 5px;
+        box-shadow: 0 8px 6px -6px #000;
+      }
+      header .social li:first-child {
+        margin: 0;
+      }
+      .hero {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 560px;
+        background: url(../img/hero.jpg) no-repeat fixed center center;
+        background-size: cover;
+      }
+      .hero .caption {
+        position: absolute;
+        max-width: 550px;
+        margin-left: 80px;
+        top: 50%;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+      }
+      .hero .caption h1 {
+        color: #525252;
+        font-family: open_bold, Helvetica, Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 700;
+        word-break: break-word;
+      }
+      .hero .caption p {
+        color: #6d6c6c;
+        font-family: open_regular, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 15px 0 35px 0;
+      }
+      #slider .caption p {
+        margin: 0;
+      }
+      a.app_store_btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px 40px;
+        border: 2px solid #525252;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        margin: 20px 20px 10px 0;
+        color: #525252;
+        font-family: open_semibold, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+      }
+      .android_icon,
+      .iphone_icon,
+      .play_icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 20px;
+        margin-bottom: 3px;
+      }
+      .play_icon {
+        background: url(../img/play.png) no-repeat;
+      }
+      .iphone_icon {
+        background: url(../img/iphone_app.png) no-repeat;
+      }
+      .android_icon {
+        background: url(../img/android_app.png) no-repeat;
+      }
+      a.app_store_btn:focus,
+      a.app_store_btn:hover {
+        border-color: #41c27d;
+        color: #41c27d !important;
+      }
+      a.app_store_btn:hover .play_icon {
+        background: url(../img/play_hover.png) no-repeat;
+      }
+      a.app_store_btn:hover .iphone_icon {
+        background: url(../img/iphone_app_hover.png) no-repeat;
+      }
+      a.app_store_btn:hover .android_icon {
+        background: url(../img/android_app_hover.png) no-repeat;
+      }
+      a.app_link {
+        text-transform: lowercase;
+        letter-spacing: 0.5px;
+        color: #636363;
+        font-family: open_regular, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+      }
+      a.app_link:focus,
+      a.app_link:hover {
+        text-decoration: none;
+        color: #41c27d !important;
+      }
+      .android_icon,
+      .iphone_icon,
+      .play_icon,
+      a.app_link,
+      a.app_store_btn {
+        transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+      }
+      .about_video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+      }
+      .about_video iframe {
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+      }
+      .close_video {
+        text-decoration: none;
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        top: 50px;
+        right: 50px;
+        background: url(../img/close_video.png) no-repeat;
+        z-index: 9999;
+      }
+      .enhance {
+        color: #fff;
+        text-transform: uppercase;
+        padding: 4px;
+        font-size: 1.4em;
+        font-weight: bolder;
+      }
+      @media (max-width: 360px) {
+        .featured_on li {
+          display: block;
+          width: 100%;
+        }
+      }
+      @media (max-width: 767px) {
+        header .logo {
+          margin-right: 0;
+        }
+        header .burger_icon {
+          display: block;
+        }
+        header nav {
+          width: 100%;
+          float: none;
+          background: #248888;
+          position: absolute;
+          margin-top: 130px;
+          left: 0;
+          display: none;
+        }
+        header nav.show {
+          display: block;
+        }
+        header nav li {
+          display: block;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+        header nav li a {
+          display: block;
+          width: 100%;
+          padding: 20px 0;
+          border-bottom: 1px solid #389965;
+        }
+        header nav li:first-child a {
+          border-top: 1px solid #389965;
+        }
+        header .social {
+          display: none;
+        }
+        header .social li {
+          margin-left: 10px;
+        }
+        .hero .caption {
+          margin-left: 0;
+        }
+        .app_store_btn {
+          display: block;
+          width: 90%;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <!--  Header Section  -->
@@ -353,17 +668,8 @@
     </footer>
 
     <!--  End Footer Section  -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/ajaxchimp.js" defer></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js" defer></script>
-    <script type="text/javascript" src="js/wow.js"></script>
-    <script type="text/javascript" src="js/parallax.js" defer></script>
-    <script type="text/javascript" src="js/nicescroll.js" defer></script>
-    <script type="text/javascript" src="js/scrollTo.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    <script type="text/javascript" src="js/main.min.js" defer></script>
   </body>
 </html>
